@@ -1,0 +1,99 @@
+header {
+  padding-top: 24px;
+
+  .container {
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      font-size: 32px;
+      line-height: 100%;
+      color: $brand-color-red;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 17.3rem;
+
+      ul {
+        display: flex;
+        gap: 1.6rem;
+
+        li {
+          padding: 8px 8px 8px 12px;
+          border-radius: 6px;
+          transition: background 0.3s;
+
+          &:hover {
+            background: #f9f9f9;
+          }
+
+          a {
+            color: $dark-10;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 170%;
+
+            display: flex;
+            align-items: center;
+            gap: 7px;
+          }
+        }
+      }
+
+      .actions {
+        button {
+          font-size: 18px;
+          line-height: 100%;
+          font-weight: 500;
+          color: $brand-color-red;
+          height: 100%;
+
+          &:last-child {
+            background-color: $brand-color-red;
+            border-radius: 4px;
+            padding: 12px 24px;
+            color: #fff;
+            margin-left: 32px;
+            transition: filter 0.3s;
+
+            &:hover {
+              filter: brightness(0.7);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .container {
+      nav {
+        gap: 99px;
+      }
+    }
+  }
+
+  @media (max-width: 998px) {
+    .container {
+      nav {
+        ul {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 568px) {
+    .container {
+      justify-content: center;
+      nav {
+        .actions {
+          display: none;
+        }
+      }
+    }
+  }
+}
